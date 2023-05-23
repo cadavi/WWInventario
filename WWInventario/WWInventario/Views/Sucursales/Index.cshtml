@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Sucursal>
+
+@{
+	ViewBag.Title = "Sucursales";
+}
+
+<h1>Sucursales</h1>
+
+<div class="row">
+	<div class="col-md-8 offset-md-2">
+		<table class="table">
+			<thead>
+				<tr class="text-center">
+					<th class="text-start">@Html.DisplayNameFor(model => model.Nombre)</th>
+					<th class="text-start">@Html.DisplayNameFor(model => model.Direccion)</th>
+					<th class="text-start">@Html.DisplayNameFor(model => model.Compania.Nombre)</th>
+					<th class="text-end">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach(var item in Model)
+				{
+					<tr>
+						<td class="text-start">
+							@Html.DisplayFor(d => item.Nombre)
+						</td>
+						<td class="text-start">
+							@Html.DisplayFor(d => item.Direccion)
+						</td>
+						<td class="text-start">
+							@Html.DisplayFor(d => item.Compania.Nombre)
+						</td>
+						<td>
+							<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"> </i>Editar</a>|
+							<a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"> <i class="bi bi-eye"> </i>Detalles </a>|
+							<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"> <i class="bi bi-trash"> </i>Eliminar</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+@await Html.PartialAsync("_CreateItem", "Sucursales")

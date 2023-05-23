@@ -1,0 +1,23 @@
+﻿@model Equipo
+
+    <div class="card-columns">
+        <div class="card">
+          <div class="card-body">
+             <h5 class="card-title">@Model.Marca</h5>
+             <h6 class="card-subtitle mb-2 text-muted">@Model.Modelo</h6>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <!--<a class="card-link" asp-controller="Equipos" asp-action="Details" asp-route-id="@Model.Id">Detalle</a>-->
+             <a class="btn btn-outline-primary float-right" asp-controller="Equipos" asp-action="Details" asp-route-id="@Model.Id">
+                <i class="bi bi-eye-fill"></i>
+                 Detalle
+             </a>
+             <a class="btn btn-outline-secondary float-right" asp-controller="Equipos" asp-action="Edit" asp-route-id="@Model.Id">
+                 Editar
+             </a>
+             <a class="btn btn-outline-secondary float-right" asp-controller="Equipos" asp-action="Delete" asp-route-id="@Model.Id">
+                Eliminar
+             </a>
+          </div>
+        </div>
+    </div>
+ 

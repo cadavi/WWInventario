@@ -1,0 +1,47 @@
+﻿@model Proveedor
+
+@{
+	ViewBag.Title = "Detalles del proveedor";
+}
+
+<div class="row text">
+	<div class="col-md-8 offset-2">
+		<p>
+			<h1> Detalles de @Model.Nombre</h1>
+		</p>
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<div class="form-group">
+					<label asp-for="Nombre" class="control-label"></label>
+					<input asp-for="Nombre" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="RNC" class="control-label"></label>
+					<input asp-for="RNC" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="Direccion" class="control-label"></label>
+					<input asp-for="Direccion" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="EmailPrincipal" class="control-label"></label>
+					<input asp-for="EmailPrincipal" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="EmailSecundario" class="control-label"></label>
+					<input asp-for="EmailSecundario" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="TelefonoPrincipal" class="control-label"></label>
+					<input asp-for="TelefonoPrincipal" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="TelefonoSecundario" class="control-label"></label>
+					<input asp-for="TelefonoSecundario" class="form-control" readonly />
+				</div>
+				<br/>
+				<a class="btn btn-outline-secondary float-right" asp-action="Index">Atr&aacute;s</a>
+			</div>
+		</div>
+	</div>
+</div>

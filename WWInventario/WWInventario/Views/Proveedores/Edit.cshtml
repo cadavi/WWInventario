@@ -1,0 +1,60 @@
+﻿@model Proveedor
+
+@{
+	ViewBag.Title = "Detalles del proveedor";
+}
+
+<div class="row text">
+	<div class="col-md-8 offset-2">
+		<p>
+			<h1> Detalles de @Model.Nombre</h1>
+		</p>
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<form asp-action="Edit">
+					<div class="form-group">
+						<label asp-for="Nombre" class="control-label"></label>
+						<input asp-for="Nombre" class="form-control"/>
+						<span asp-validation-for="Nombre" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="RNC" class="control-label"></label>
+						<input asp-for="RNC" class="form-control"/>
+						<span asp-validation-for="RNC" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Direccion" class="control-label"></label>
+						<input asp-for="Direccion" class="form-control"/>
+						<span asp-validation-for="Direccion" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="EmailPrincipal" class="control-label"></label>
+						<input asp-for="EmailPrincipal" class="form-control"/>
+						<span asp-validation-for="EmailPrincipal" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="EmailSecundario" class="control-label"></label>
+						<input asp-for="EmailSecundario" class="form-control"/>
+						<span asp-validation-for="EmailSecundario" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="TelefonoPrincipal" class="control-label"></label>
+						<input asp-for="TelefonoPrincipal" class="form-control"/>
+						<span asp-validation-for="TelefonoPrincipal" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="TelefonoSecundario" class="control-label"></label>
+						<input asp-for="TelefonoSecundario" class="form-control"/>
+						<span asp-validation-for="TelefonoSecundario" class="text-danger"></span>
+					</div>
+					<br />
+					<div class="form-group">
+						<input type="submit" value="Actualizar" class="btn btn-outline-success float-end" />
+						<a class="btn btn-outline-secondary" asp-action="Index">VER TODAS</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

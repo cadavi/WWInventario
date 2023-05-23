@@ -1,0 +1,35 @@
+﻿@model Proveedor;
+
+@{
+	ViewBag.Title = "Eliminar proveedor";
+}
+
+
+<div class="row text">
+	<div class="col-md-8 offset-2">
+		<p>
+			<h1> Eliminar @Model.Nombre</h1>
+		</p>
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<div class="form-group">
+					<label asp-for="Nombre" class="control-label"></label>
+					<input asp-for="Nombre" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="RNC" class="control-label"></label>
+					<input asp-for="RNC" class="form-control" readonly />
+				</div>
+				<br />
+				<div class="form-group">
+					<form asp-action="Delete">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<input type="hidden" asp-for="Id" />
+						<input type="submit" value="Confirmar" class="btn btn-danger float-right" />
+						<a class="btn btn-outline-secondary" asp-action="Index">MOSTRAR TODAS</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

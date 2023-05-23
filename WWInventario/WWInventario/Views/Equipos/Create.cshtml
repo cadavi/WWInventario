@@ -1,0 +1,97 @@
+﻿@using WWInventario.Data.ViewModels
+@model NewEquipoVM
+
+@{
+	ViewBag.Title = "Crear nuevo equipo";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8 offset-2">
+			<p>
+				<h4>
+					Crear nuevo equipo
+				</h4>
+			</p>
+
+			<div class="row">
+				<div class="col-md-8 offset-2">
+					<form asp-action="Create" method="post">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label asp-for="DispositivoId" class="control-label"></label>
+									<select asp-for="DispositivoId" class="form-select" asp-items="ViewBag.Dispositivos"></select>
+									<span asp-validation-for="DispositivoId" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="Marca" class="control-label"></label>
+									<input asp-for="Marca" class="form-control" />
+									<span asp-validation-for="Marca" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="Modelo" class="control-label"></label>
+									<input asp-for="Modelo" class="form-control" />
+									<span asp-validation-for="Modelo" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="SerialNo" class="control-label"></label>
+									<input asp-for="SerialNo" class="form-control" />
+									<span asp-validation-for="SerialNo" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="FechaCompra" class="control-label"></label>
+									<input asp-for="FechaCompra" type="date" class="form-control" />
+									<span asp-validation-for="FechaCompra" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="FechaInicioGarantia" class="control-label"></label>
+									<input asp-for="FechaInicioGarantia" type="date" class="form-control" />
+									<span asp-validation-for="FechaInicioGarantia" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="FechaFinGarantia" class="control-label"></label>
+									<input asp-for="FechaFinGarantia" type="date" class="form-control" />
+									<span asp-validation-for="FechaFinGarantia" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="EstadoEquipoId" class="control-label"></label>
+									<select asp-for="EstadoEquipoId" class="form-select" asp-items="ViewBag.EstadosEquipos"></select>
+									<span asp-validation-for="EstadoEquipoId" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="UsuarioResponsableId" class="control-label"></label>
+									<select asp-for="UsuarioResponsableId" class="form-select" asp-items="ViewBag.Usuarios"></select>
+									<span asp-validation-for="UsuarioResponsableId" class="text-danger"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="FechaAsignacion" class="control-label"></label>
+									<input asp-for="FechaAsignacion" type="date" class="form-control" />
+									<span asp-validation-for="FechaAsignacion" class="text-danger"></span>
+								</div>
+
+					
+								<div class="form-group mt-1">
+									<input type="submit" value="Crear" class="btn btn-outline-success float-end" />
+									<a class="btn btn-outline-secondary" asp-action="Index">VER TODOS</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

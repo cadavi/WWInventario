@@ -1,0 +1,31 @@
+﻿@model Compania
+
+@{
+	ViewBag.Title = "Detalles de la compañia";
+}
+
+<div class="row text">
+	<div class="col-md-8 offset-2">
+		<p>
+			<h1> Detalles de @Model.Nombre</h1>
+		</p>
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<div class="form-group">
+					<label asp-for="Nombre" class="control-label"></label>
+					<input asp-for="Nombre" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="Pais" class="control-label"></label>
+					<input asp-for="Pais" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="LogoPath" class="control-label"></label>
+					<input asp-for="LogoPath" class="form-control" readonly />
+				</div>
+				<br/>
+				<a class="btn btn-outline-secondary float-right" asp-action="Index">Atr&aacute;s</a>
+			</div>
+		</div>
+	</div>
+</div>

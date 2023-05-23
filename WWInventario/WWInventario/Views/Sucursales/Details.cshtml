@@ -1,0 +1,46 @@
+﻿@model Sucursal
+
+@{
+	ViewBag.Title = "Detalles sucursal";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8 offset-2">
+			<p>
+				<h6>
+					Detalles Sucursal
+				</h6>
+			</p>
+
+			<div class="row">
+				<div class="col-md-8 offset-2">
+					<form asp-action="Edit">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label asp-for="Nombre" class="control-label"></label>
+									<input asp-for="Nombre" class="form-control" readonly/>
+								</div>
+								<div class="form-group">
+									<label asp-for="Direccion" class="control-label"></label>
+									<input asp-for="Direccion" class="form-control" readonly/>
+								</div>
+								<div class="form-group">
+									<label asp-for="@Model.Compania.Nombre" class="control-label"></label>
+									<input asp-for="@Model.Compania.Nombre" class="form-control" readonly/>
+								</div>
+								<br />
+								<a class="btn btn-outline-secondary float-right" asp-controller="Sucursales" asp-action="Index">Atr&aacute;s</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model Sucursal
+
+@{
+	ViewBag.Title = "Eliminar sucursal";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8 offset-2">
+			<p>
+				<h6>
+					Eliminar Sucursal
+				</h6>
+			</p>
+
+			<div class="row">
+				<div class="col-md-8 offset-2">
+					<form asp-action="Delete">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label asp-for="Nombre" class="control-label"></label>
+									<input asp-for="Nombre" class="form-control" readonly/>
+								</div>
+								<div class="form-group">
+									<label asp-for="Direccion" class="control-label"></label>
+									<input asp-for="Direccion" class="form-control" readonly/>
+								</div>
+								<div class="form-group">
+									<label asp-for="@Model.Compania.Nombre" class="control-label"></label>
+									<input asp-for="@Model.Compania.Nombre" class="form-control" readonly/>
+								</div>
+
+								<br />
+								<div class="form-group">
+									<input type="submit" value="Eliminar" class="btn btn-outline-success float-end" />
+									<a class="btn btn-outline-secondary" asp-action="Index">VER TODAS</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
